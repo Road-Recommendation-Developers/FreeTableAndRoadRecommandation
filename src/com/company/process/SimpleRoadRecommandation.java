@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import com.company.dataBean.POIPoint;
+
+import java.io.IOException;
 import com.company.dataBean.GPSPoint;
 import jdk.internal.org.objectweb.asm.tree.analysis.Analyzer;
 
@@ -17,6 +19,17 @@ public class SimpleRoadRecommandation {
 
 
     public SimpleRoadRecommandation() {
+    }
+    public void CallPythonCode(){
+        // TODO Auto-generated method stub
+        Process proc;
+        try {
+            proc = Runtime.getRuntime().exec("python src\\Python\\GetData.py");// 执行py文件
+            //用输入输出流来截取结果
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public double CalculateTheTotalDistance(List<POIPoint> poiDatas) {

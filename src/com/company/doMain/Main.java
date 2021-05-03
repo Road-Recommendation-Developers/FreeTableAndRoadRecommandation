@@ -22,7 +22,7 @@ public class Main {
         double temp=sim.CalculateTheTotalDistance(poiDatas);
         //简单地根据兴趣点索引顺序进行路线推荐
         //进行课程表方面的分析，实现函数设计
-
+        sim.CallPythonCode();
         String coursefilepath="src\\Data\\infos.txt";
         InputCourseData icd=new InputCourseData();
         List <Course> courseDatas=icd.ReadFile(coursefilepath);
